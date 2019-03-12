@@ -29,7 +29,7 @@ class PostDaoTest {
     @Test
     fun testInsert() {
         //新增
-        val post1 = Post("1", "测试", "niaoshuai", System.currentTimeMillis(), System.currentTimeMillis(), null, "")
+        val post1 = Post("1", "测试", null, null)
         db.posts().insert(Arrays.asList(post1))
         //查询
         val dbPost1 = db.posts().findById("1")

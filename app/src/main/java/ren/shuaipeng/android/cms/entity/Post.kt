@@ -8,9 +8,9 @@ data class Post(
     @PrimaryKey
     val id: String,
     val title: String,
-    val author: String,
-    val gmtCreate: Long,
-    val gmtModified: Long,
+
+//    val gmtCreate: LocalDateTime,
+//    val gmtModified: LocalDateTime,
     val thumbnail: String?,
     val url: String?
 )

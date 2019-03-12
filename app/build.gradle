@@ -48,10 +48,10 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.13.1'
+//    implementation 'com.squareup.retrofit2:retrofit-mock:2.5.0'
     //数据库
     implementation 'androidx.room:room-runtime:2.0.0'
     kapt 'androidx.room:room-compiler:2.0.0'
-    androidTestImplementation 'androidx.room:room-testing:2.0.0'
     // 分页
     implementation 'androidx.paging:paging-runtime-ktx:2.1.0'
     // 测试
