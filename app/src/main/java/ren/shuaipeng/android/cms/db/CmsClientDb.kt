@@ -1,9 +1,7 @@
 package ren.shuaipeng.android.cms.db
 
 import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
 import ren.shuaipeng.android.cms.entity.Post
 
 @Database(
@@ -11,6 +9,7 @@ import ren.shuaipeng.android.cms.entity.Post
     version = 1,
     exportSchema = false
 )
+@TypeConverters(DateConvert::class)
 abstract class CmsClientDb : RoomDatabase() {
 
     companion object {

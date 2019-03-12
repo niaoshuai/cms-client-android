@@ -8,6 +8,7 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import ren.shuaipeng.android.cms.entity.Post
+import java.time.LocalDateTime
 import java.util.*
 
 @RunWith(AndroidJUnit4::class)
@@ -29,7 +30,7 @@ class PostDaoTest {
     @Test
     fun testInsert() {
         //新增
-        val post1 = Post("1", "测试", null, null)
+        val post1 = Post("1", "测试",  Date(System.currentTimeMillis()), Date(System.currentTimeMillis()),null,null)
         db.posts().insert(Arrays.asList(post1))
         //查询
         val dbPost1 = db.posts().findById("1")
