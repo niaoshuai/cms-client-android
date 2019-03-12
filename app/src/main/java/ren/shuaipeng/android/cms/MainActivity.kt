@@ -1,8 +1,8 @@
-package ren.shuaipeng.android.samples
+package ren.shuaipeng.android.cms
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import ren.shuaipeng.android.samples.ui.main.MainFragment
+import ren.shuaipeng.android.cms.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,10 +1,10 @@
-package ren.shuaipeng.android.samples.api
+package ren.shuaipeng.android.cms.api
 
 import android.util.Log
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import ren.shuaipeng.android.samples.entity.Post
+import ren.shuaipeng.android.cms.entity.Post
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET

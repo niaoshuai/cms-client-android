@@ -1,4 +1,4 @@
-package ren.shuaipeng.android.samples
+package ren.shuaipeng.android.cms
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

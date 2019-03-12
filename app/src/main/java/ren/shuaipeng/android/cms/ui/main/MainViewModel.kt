@@ -1,4 +1,4 @@
-package ren.shuaipeng.android.samples.ui.main
+package ren.shuaipeng.android.cms.ui.main
 
 import androidx.lifecycle.ViewModel
 

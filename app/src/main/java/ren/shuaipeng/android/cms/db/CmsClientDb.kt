@@ -1,10 +1,10 @@
-package ren.shuaipeng.android.samples.db
+package ren.shuaipeng.android.cms.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import ren.shuaipeng.android.samples.entity.Post
+import ren.shuaipeng.android.cms.entity.Post
 
 @Database(
     entities = arrayOf(Post::class),

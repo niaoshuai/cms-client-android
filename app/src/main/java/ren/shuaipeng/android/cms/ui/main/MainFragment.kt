@@ -1,4 +1,4 @@
-package ren.shuaipeng.android.samples.ui.main
+package ren.shuaipeng.android.cms.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import ren.shuaipeng.android.samples.R
+import ren.shuaipeng.android.cms.R
 
 class MainFragment : Fragment() {
 
