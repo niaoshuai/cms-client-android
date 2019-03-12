@@ -25,6 +25,8 @@ interface CmsClientApi {
 
     companion object {
         private const val BASE_URL = "http://192.168.11.230:8080/"
+        private const val BASE_MOCK_URL = "http://localhost:"
+        fun createMock(port: Int): CmsClientApi = create(HttpUrl.parse("$BASE_MOCK_URL$port")!!)
         fun create(): CmsClientApi = create(HttpUrl.parse(BASE_URL)!!)
         fun create(httpUrl: HttpUrl): CmsClientApi {
             val logger = HttpLoggingInterceptor(HttpLoggingInterceptor.Logger {
