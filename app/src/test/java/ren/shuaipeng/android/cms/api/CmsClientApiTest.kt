@@ -2,6 +2,7 @@ package ren.shuaipeng.android.cms.api
 
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
+import org.junit.After
 import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Rule
@@ -16,8 +17,13 @@ class CmsClientApiTest {
     private lateinit var api: CmsClientApi
 
     @Before
-    fun init() {
+    fun `start mock`() {
         api = CmsClientApi.createMock(mockWebServer.port)
+    }
+
+    @After
+    fun `close mock`() {
+        mockWebServer.close()
     }
 
     @Test

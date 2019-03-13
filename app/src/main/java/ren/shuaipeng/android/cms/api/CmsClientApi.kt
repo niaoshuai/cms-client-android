@@ -1,6 +1,5 @@
 package ren.shuaipeng.android.cms.api
 
-import android.util.Log
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -26,9 +25,7 @@ interface CmsClientApi {
         fun createMock(port: Int): CmsClientApi = create(HttpUrl.parse("$BASE_MOCK_URL$port")!!)
         fun create(): CmsClientApi = create(HttpUrl.parse(BASE_URL)!!)
         fun create(httpUrl: HttpUrl): CmsClientApi {
-            val logger = HttpLoggingInterceptor(HttpLoggingInterceptor.Logger {
-                Log.d("API", it)
-            })
+            val logger = HttpLoggingInterceptor(HttpLoggingInterceptor.Logger.DEFAULT)
             logger.level = HttpLoggingInterceptor.Level.BASIC
 
             val client = OkHttpClient.Builder()

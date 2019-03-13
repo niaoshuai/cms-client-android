@@ -2,44 +2,44 @@ package ren.shuaipeng.android.cms.db
 
 import androidx.test.platform.app.InstrumentationRegistry.getInstrumentation
 import org.junit.After
-import org.junit.Assert.assertFalse
-import org.junit.Assert.assertTrue
+import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 import ren.shuaipeng.android.cms.entity.Post
 import java.time.LocalDateTime
 import java.util.*
 
-class PostDaoTest {
+
+/**
+ * 另外的方式
+ */
+class PostDaoTestN {
 
     private lateinit var db: CmsClientDb
 
     @Before
-    fun init() {
+    fun `init_db`() {
         db = CmsClientDb.create(getInstrumentation().context, true)
     }
 
     @After
-    fun close() {
+    fun `close_db`() {
         db.close()
     }
 
     @Test
-    fun testInsert() {
+    fun `test_db_post_add`() {
         //新增
-        val post1 = Post("1", "测试", LocalDateTime.now(), LocalDateTime.now(), null, null)
-        db.posts().insert(Arrays.asList(post1))
+        val post = Post("1", "测试", LocalDateTime.now(), LocalDateTime.now(), null, null)
+        db.posts().insert(Arrays.asList(post))
         //查询
-        val dbPost1 = db.posts().findById("1")
+        val dbPost = db.posts().findById("1")
         //匹配
-//        dbPost1.observe(,{
-//            assertEquals(post1.id, it.id)
-//        } )
-
+        assertEquals(post.id, dbPost.id)
     }
 
     @Test
-    fun testHasPost() {
+    fun `test_db_post_has`() {
         val now = LocalDateTime.now()
         val post1 = Post("1", "测试", now, now, null, null)
         db.posts().insert(Arrays.asList(post1))
