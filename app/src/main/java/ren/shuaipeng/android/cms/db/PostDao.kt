@@ -1,5 +1,6 @@
 package ren.shuaipeng.android.cms.db
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -11,10 +12,10 @@ import java.time.LocalDateTime
 interface PostDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(posts : List<Post>)
+    fun insert(posts: Post)
 
     @Query("SELECT * FROM post WHERE id = :id")
-    fun findById(id: String): Post
+    fun findById(id: String): LiveData<Post>
 
     @Query("SELECT 1 FROM post WHERE gmt_create between :start and :end")
     fun hasPost(start: LocalDateTime, end: LocalDateTime): Boolean

@@ -1,10 +1,10 @@
 package ren.shuaipeng.android.cms.api
 
+import androidx.lifecycle.LiveData
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import ren.shuaipeng.android.cms.entity.Post
-import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -16,7 +16,7 @@ import retrofit2.http.Path
 interface CmsClientApi {
 
     @GET("/post/{id}")
-    fun postDetail(@Path("id") id: String): Call<Post>
+    fun postDetail(@Path("id") id: String): LiveData<ApiResponse<Post>>
 
 
     companion object {
