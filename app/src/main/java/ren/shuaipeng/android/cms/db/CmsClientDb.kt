@@ -1,7 +1,8 @@
 package ren.shuaipeng.android.cms.db
 
-import android.content.Context
-import androidx.room.*
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import ren.shuaipeng.android.cms.entity.Post
 
 @Database(
@@ -12,18 +13,6 @@ import ren.shuaipeng.android.cms.entity.Post
 @TypeConverters(DateConvert::class)
 abstract class CmsClientDb : RoomDatabase() {
 
-    companion object {
-        fun create(context: Context, useInMemory : Boolean): CmsClientDb {
-            val databaseBuilder = if(useInMemory) {
-                Room.inMemoryDatabaseBuilder(context, CmsClientDb::class.java)
-            } else {
-                Room.databaseBuilder(context, CmsClientDb::class.java, "reddit.db")
-            }
-            return databaseBuilder
-                .fallbackToDestructiveMigration()
-                .build()
-        }
-    }
+    abstract fun postDao(): PostDao
 
-    abstract fun posts(): PostDao
 }
