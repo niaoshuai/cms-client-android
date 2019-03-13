@@ -25,7 +25,7 @@ class CmsClientApiTest {
         //模拟服务器的response
         mockWebServer.enqueue(MockResponse().setBody("{\"id\": \"14\",\"title\": \"XX\"}"))
 
-        var item = api.detail("14").execute()
+        var item = api.postDetail("14").execute()
         assertNotNull(item)
         assertNotNull(item.body())
         assertNotNull(item.body()!!.id)

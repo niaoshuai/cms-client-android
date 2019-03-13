@@ -1,11 +1,9 @@
 package ren.shuaipeng.android.cms.api
 
 import android.util.Log
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.junit.runner.RunWith
 import ren.shuaipeng.android.cms.entity.Post
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -16,11 +14,10 @@ import retrofit2.http.Path
 /**
  * 定义API接口
  */
-@RunWith(AndroidJUnit4::class)
 interface CmsClientApi {
 
     @GET("/post/{id}")
-    fun detail(@Path("id") id: String): Call<Post>
+    fun postDetail(@Path("id") id: String): Call<Post>
 
 
     companion object {
