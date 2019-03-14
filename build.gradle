@@ -12,7 +12,7 @@ buildscript {
             url 'https://maven.aliyun.com/repository/jcenter'
         }
 
-        
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
@@ -33,7 +33,7 @@ allprojects {
             url 'https://maven.aliyun.com/repository/jcenter'
         }
 
-        
+
     }
 }
 
