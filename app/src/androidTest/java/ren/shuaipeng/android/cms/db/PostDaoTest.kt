@@ -5,8 +5,8 @@ import org.hamcrest.core.Is.`is`
 import org.junit.Assert.assertThat
 import org.junit.Rule
 import org.junit.Test
-import ren.shuaipeng.android.cms.db.LiveDataTestUtil.getValue
 import ren.shuaipeng.android.cms.entity.Post
+import ren.shuaipeng.android.cms.kit.LiveDataKit.getValue
 import java.time.LocalDateTime
 
 class PostDaoTest : DbTest() {

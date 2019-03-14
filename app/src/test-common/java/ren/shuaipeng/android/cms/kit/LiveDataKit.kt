@@ -1,5 +1,4 @@
-package ren.shuaipeng.android.cms.db
-
+package ren.shuaipeng.android.cms.kit
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -7,7 +6,7 @@ import androidx.lifecycle.Observer
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 
-object LiveDataTestUtil {
+object LiveDataKit {
     fun <T> getValue(liveData: LiveData<T>): T {
         val data = arrayOfNulls<Any>(1)
         val latch = CountDownLatch(1)
